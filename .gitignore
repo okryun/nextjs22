@@ -1,30 +1,41 @@
-# General
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
 .DS_Store
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-node_modules
-out
-build
-.next
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+*.pem
 
-# Logs and temp files
-*.log
-*.temp
-*.swp
-*.swo
-.vscode/settings.json
-.vscode/extensions.json
-.idea
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
 
-# Optional: If using a static site generator alongside Next.js (e.g., for a /static directory)
-/static
+# env files (can opt-in for committing if needed)
+.env*
 
-# Optional: If you have build artifacts you want to ignore
-/public/build
-/public/_next
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
